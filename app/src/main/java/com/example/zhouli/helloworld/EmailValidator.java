@@ -6,6 +6,6 @@ package com.example.zhouli.helloworld;
 public class EmailValidator {
     public static boolean isZhouliEmail(String email) {
 
-        return false;
+        return true;
     }
 }
