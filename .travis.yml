@@ -6,8 +6,11 @@ env:
 
 android:
   components:
-    - build-tools-23.0.2
+    - build-tools-23.0.1
     - android-23
+    - extra-google-m2repository
+    - extra-android-m2repository
+    - sys-img-armeabi-v7a-android-23
 
  
 before_script:
@@ -17,6 +20,9 @@ before_script:
   - adb wait-for-device
   - adb shell input keyevent 82 &
 
-script: ./gradlew connectedAndroidTest
 
+notifications:
+  email:true
 
+script: 
+   ./gradlew connectedAndroidTest
